@@ -35,3 +35,5 @@
 
 # Ignore public uploads
 public/uploads
+
+node_modules/
