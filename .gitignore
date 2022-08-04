@@ -47,3 +47,6 @@ public/decidim-packs/
 Capfile
 config/deploy.rb
 config/deploy/
+
+# Ignore application configuration
+/config/application.yml
