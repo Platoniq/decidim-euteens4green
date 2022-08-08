@@ -49,16 +49,16 @@ en:
         project_impacts: What impacts will your project have?
         duration: What is the duration of your action? (max. 12 months)
         budget: What is the budget requested? (max. 10.000€)
-      options:
+      gender_options:
         male: Male
         female: Female
         non_binary: Non-binary
         transgender: Transgender
         intersex: Intersex
         undefined: I prefer not to say
+      applying_as_options:
         individual: Individual
         group_young: Group of young people
         youth_assoc: Youth association
-      helps:
-        where_do_you_live: Where do you live?
+      project_impacts_helps:
         community_neighborhood_etc: In the community, neighborhood...
