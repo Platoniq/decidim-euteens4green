@@ -1,0 +1,35 @@
+es:
+  eut4g:
+    application_call:
+      fields:
+        name: Nombre
+        email: Email
+        age: Edad
+        gender: ¿Cuáles de las siguientes opciones te describen mejor?
+        region: Región/Ciudad
+        country: País
+        applying_as: Estás aplicando como...
+        project_idea: Por favor, describe tu idea de proyecto
+        actions_to_implement: Por favor, describe las acciones que propones implementar
+        project_plan: Por favor, define tu plan de proyecto
+        project_relevance: Según tu punto de vista, ¿cuál es la relevancia del proyecto para una transición verde y justa?
+        group_less_exposed_people: ¿Qué grupo objetivo ("personas menos expuestas") has identificado? ¿Puedes describir brevemente por qué consideras que corren el riesgo de ser excluidos de la transición verde?
+        plan_increase_participation: ¿Cómo planeas aumentar la participación de este grupo objetivo? ¿Cómo se beneficiarán de tu proyecto?
+        project_impacts: ¿Qué impactos tendrá tu proyecto?
+        duration: ¿Cuál es la duración de tu acción? (máx. 12 meses)
+        budget: ¿Cuál es el presupuesto solicitado? (máx. 10.000€)
+      gender_options:
+        man: Hombre
+        woman: Mujer
+        non_binary: No binario
+        transgender: Transgénero
+        intersex: Intersexual
+        undefined: Prefiero no decirlo
+      gender_helps:
+        choose: Elige todas las opciones que desees o agrega una propia
+      applying_as_options:
+        individual: Individuo
+        group_young: Grupo de gente joven
+        youth_assoc: Asociación juvenil
+      project_impacts_helps:
+        community_neighborhood_etc: En la comunidad, barrio...
