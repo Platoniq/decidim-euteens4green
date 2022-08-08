@@ -36,7 +36,7 @@ en:
         name: Name
         email: Email
         age: Age
-        gender: Gender
+        gender: Which of the following most accurately describes you?
         region: Region/city
         country: Country
         applying_as: Are you applying as
@@ -50,12 +50,14 @@ en:
         duration: What is the duration of your action? (max. 12 months)
         budget: What is the budget requested? (max. 10.000€)
       gender_options:
-        male: Male
-        female: Female
+        man: Man
+        woman: Woman
         non_binary: Non-binary
         transgender: Transgender
         intersex: Intersex
         undefined: I prefer not to say
+      gender_helps:
+        choose: Choose all options that apply or add your own
       applying_as_options:
         individual: Individual
         group_young: Group of young people
