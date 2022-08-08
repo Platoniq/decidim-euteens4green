@@ -30,4 +30,35 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  eut4g:
+    application_call:
+      fields:
+        name: Name
+        email: Email
+        age: Age
+        gender: Gender
+        region: Region/city
+        country: Country
+        applying_as: Are you applying as
+        project_idea: Please describe your project idea
+        actions_to_implement: Please describe the actions you propose to implement
+        project_plan: Please describe your project plan
+        project_relevance: In your view what is the project relevance for the Green and Just Transition?
+        group_less_exposed_people: Which target group ("less exposed people") have you identified? Can you shortly describe why you consider them to be at risk of being excluded of the green transition?
+        plan_increase_participation: How do you plan to increase the participation of this target group? How will they benefit from your project?
+        project_impacts: What impacts will your project have?
+        duration: What is the duration of your action? (max. 12 months)
+        budget: What is the budget requested? (max. 10.000€)
+      options:
+        male: Male
+        female: Female
+        non_binary: Non-binary
+        transgender: Transgender
+        intersex: Intersex
+        undefined: I prefer not to say
+        individual: Individual
+        group_young: Group of young people
+        youth_assoc: Youth association
+      helps:
+        where_do_you_live: Where do you live?
+        community_neighborhood_etc: In the community, neighborhood...
