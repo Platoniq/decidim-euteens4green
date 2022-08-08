@@ -5,7 +5,7 @@ es:
         name: Nombre
         email: Email
         age: Edad
-        gender: ¿Cuál de las siguientes opciones te describen mejor?
+        gender: ¿Cuáles de las siguientes opciones te describen mejor?
         region: Región/Ciudad
         country: País
         applying_as: Estás aplicando como...
