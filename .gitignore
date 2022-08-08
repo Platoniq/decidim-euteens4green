@@ -46,7 +46,7 @@ public/decidim-packs/
 # Ignore capistrano files
 Capfile
 config/deploy.rb
-config/deploy/
+config/deploy*
 
 # Ignore application configuration
 /config/application.yml
