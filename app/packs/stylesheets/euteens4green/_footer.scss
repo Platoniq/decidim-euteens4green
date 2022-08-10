@@ -1,0 +1,63 @@
+@import "./variables";
+
+.mini-footer,
+.main-footer,
+.eu-footer {
+  background: $primary-color;
+
+  color: $white;
+}
+
+.mini-footer {
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    padding: 1rem;
+  }
+
+  .row .column:first-child {
+    padding: 1rem;
+  }
+}
+
+.main-footer,
+.mini-footer {
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $light-gray;
+    }
+  }
+}
+
+.decidim-logo:not(.platoniq-logo) {
+  margin-bottom: 8px;
+  margin-right: 0;
+}
+
+.platoniq-logo {
+  margin-left: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.eu-footer {
+  .eu-disclaimer {
+    display: flex;
+    align-items: center;
+    gap: $global-padding;
+
+    &__img {
+      height: 5rem;
+    }
+  }
+}

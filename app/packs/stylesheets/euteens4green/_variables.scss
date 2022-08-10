@@ -1,0 +1,166 @@
+@function extract-rgb($color) {
+  @return red($color), green($color), blue($color);
+}
+
+$color-green-1: #21635c;
+$color-green-2: #18875f;
+$color-green-3: #81cc29;
+$color-gray-dark: #737373;
+
+$primary-color: $color-green-1;
+$secondary-color: $color-green-2;
+$success-color: $color-green-3;
+$warning-color: #ccc629;
+$alert-color: #cc7429;
+$primary-color-rgb: extract-rgb($primary-color);
+$secondary-color-rgb: extract-rgb($secondary-color);
+$success-color-rgb: extract-rgb($success-color);
+$warning-color-rgb: extract-rgb($warning-color);
+$alert-color-rgb: extract-rgb($alert-color);
+
+:root {
+  --primary: #{$primary-color};
+  --primary-rgb: #{$primary-color-rgb};
+  --secondary: #{$secondary-color};
+  --secondary-rgb: #{$secondary-color-rgb};
+  --success: #{$success-color};
+  --success-rgb: #{$success-color-rgb};
+  --warning: #{$warning-color};
+  --warning-rgb: #{$warning-color-rgb};
+  --alert: #{$alert-color};
+  --alert-rgb: #{$alert-color-rgb};
+}
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 135%;
+$color-palette: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  warning: $warning-color,
+  alert: $alert-color,
+);
+$foundation-palette: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  warning: $warning-color,
+  alert: $alert-color,
+  white: $white,
+  dislike: #cb38ff,
+  cat1: #ff9900,
+  cat2: #5bd8ff,
+  cat3: #29cc74,
+  cat4: #7429cc,
+  cat5: #cc2981,
+  cat6: #29ccc6,
+  cat7: #f1cf49,
+  cat8: #2981cc,
+  cat9: #ff6262,
+  cat10: #0b8282,
+  cat11: #cc2930,
+  cat12: #0adba9,
+);
+$light-gray: lighten($color-gray-dark, 30%);
+$medium-gray: lighten($color-gray-dark, 10%);
+$dark-gray: $color-gray-dark;
+$white: #ffffff;
+$black: #000000;
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: "League Spartan", sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-weight-normal: 300;
+$global-weight-bold: 700;
+$global-radius: 0px;
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-text-direction: ltr;
+$global-flexbox: true;
+$global-prototype-breakpoints: false;
+$global-button-cursor: auto;
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;
+$print-hrefs: true;
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$header-color: inherit;
+$header-lineheight: 1.1;
+$header-margin-bottom: 0.5rem;
+$header-styles: (
+  small: (
+    "h1": (
+      "font-size": 3.75rem,
+      "line-height": $header-lineheight,
+      "font-weight": 900,
+    ),
+    "h2": (
+      "font-size": 1.5rem,
+      "line-height": $header-lineheight,
+      "font-weight": 300,
+    ),
+    "h3": (
+      "font-size": 2rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h4": (
+      "font-size": 1.25rem,
+      "line-height": $header-lineheight,
+      "font-weight": 500,
+    ),
+    "h5": (
+      "font-size": 1.25rem,
+      "line-height": 135%,
+      "font-weight": 300,
+    ),
+    "h6": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+  medium: (
+    "h1": (
+      "font-size": 3.75rem,
+      "line-height": $header-lineheight,
+      "font-weight": 900,
+    ),
+    "h2": (
+      "font-size": 1.5rem,
+      "line-height": $header-lineheight,
+      "font-weight": 300,
+    ),
+    "h3": (
+      "font-size": 2rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h4": (
+      "font-size": 1.25rem,
+      "line-height": $header-lineheight,
+      "font-weight": 500,
+    ),
+    "h5": (
+      "font-size": 1.25rem,
+      "line-height": 135%,
+      "font-weight": 300,
+    ),
+    "h6": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+);
+
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;

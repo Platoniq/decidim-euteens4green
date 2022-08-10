@@ -1,0 +1,12 @@
+@import "./variables";
+
+.off-canvas-wrapper {
+  background-color: $body-background;
+}
+
+.section-heading {
+  &::before {
+    clip-path: polygon(0% 0%, 85% 50%, 0% 100%);
+    width: 1.35rem;
+  }
+}
