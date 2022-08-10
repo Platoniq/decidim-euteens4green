@@ -6,7 +6,10 @@
 
 .section-heading {
   &::before {
-    clip-path: polygon(0% 0%, 85% 50%, 0% 100%);
+    /* I can't get this background-image to work :( */
+    // background-image: url(../images/header-leaves.png);
+    background-position: center;
+    background-size: cover;
     width: 1.35rem;
   }
 }
