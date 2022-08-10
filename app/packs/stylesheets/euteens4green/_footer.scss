@@ -1,9 +1,19 @@
 @import "./variables";
 
+.footer {
+  background: linear-gradient(
+    90deg,
+    $primary-color 10%,
+    $secondary-color 10%,
+    $secondary-color 90%,
+    $primary-color 90%
+  );
+}
+
 .mini-footer,
 .main-footer,
 .eu-footer {
-  background: $primary-color;
+  background: none;
 
   color: $white;
 }
@@ -58,6 +68,12 @@
 
     &__img {
       height: 5rem;
+
+      img {
+        height: 100%;
+        max-width: none;
+        width: auto;
+      }
     }
   }
 }
