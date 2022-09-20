@@ -7,8 +7,8 @@ $color-green-2: #18875f;
 $color-green-3: #81cc29;
 $color-gray-dark: #737373;
 
-$primary-color: $color-green-1;
-$secondary-color: $color-green-2;
+$primary-color: $color-green-2;
+$secondary-color: $color-green-1;
 $success-color: $color-green-3;
 $warning-color: #ccc629;
 $alert-color: #cc7429;
@@ -31,7 +31,7 @@ $alert-color-rgb: extract-rgb($alert-color);
   --alert-rgb: #{$alert-color-rgb};
 }
 
-$global-font-size: 100%;
+$global-font-size: 120%;
 $global-width: rem-calc(1200);
 $global-lineheight: 135%;
 $color-palette: (
@@ -69,12 +69,12 @@ $white: #ffffff;
 $black: #000000;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: "Arimo", sans-serif;
+$body-font-family: "League Spartan", sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: 300;
+$global-weight-normal: 400;
 $global-weight-bold: 700;
 $global-radius: 0px;
 $global-menu-padding: 0.7rem 1rem;
@@ -87,7 +87,7 @@ $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 $print-hrefs: true;
 
-$body-font-family: "League Spartan", sans-serif;
+$header-font-family: "Arimo", sans-serif;
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $header-color: inherit;
@@ -103,7 +103,7 @@ $header-styles: (
     "h2": (
       "font-size": 1.5rem,
       "line-height": $header-lineheight,
-      "font-weight": 300,
+      "font-weight": 400,
     ),
     "h3": (
       "font-size": 2rem,
@@ -118,7 +118,7 @@ $header-styles: (
     "h5": (
       "font-size": 1.25rem,
       "line-height": 135%,
-      "font-weight": 300,
+      "font-weight": 400,
     ),
     "h6": (
       "font-size": 1rem,
@@ -135,7 +135,7 @@ $header-styles: (
     "h2": (
       "font-size": 1.5rem,
       "line-height": $header-lineheight,
-      "font-weight": 300,
+      "font-weight": 400,
     ),
     "h3": (
       "font-size": 2rem,
@@ -150,7 +150,7 @@ $header-styles: (
     "h5": (
       "font-size": 1.25rem,
       "line-height": 135%,
-      "font-weight": 300,
+      "font-weight": 400,
     ),
     "h6": (
       "font-size": 1rem,

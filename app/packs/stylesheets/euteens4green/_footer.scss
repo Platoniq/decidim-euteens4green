@@ -1,13 +1,7 @@
 @import "./variables";
 
 .footer {
-  background: linear-gradient(
-    90deg,
-    $primary-color 10%,
-    $secondary-color 10%,
-    $secondary-color 90%,
-    $primary-color 90%
-  );
+  background: $secondary-color;
 }
 
 .mini-footer,

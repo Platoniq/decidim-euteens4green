@@ -7,3 +7,9 @@
 .navbar {
   background-color: $primary-color;
 }
+
+.header {
+  font-weight: $header-font-weight;
+  font-variation-settings: "wght" $header-font-weight;
+  font-family: $header-font-family;
+}
