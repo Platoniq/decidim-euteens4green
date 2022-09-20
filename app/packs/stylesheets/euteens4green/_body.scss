@@ -1,0 +1,22 @@
+@import "./variables";
+
+.off-canvas-wrapper {
+  background-color: $body-background;
+}
+
+.section-heading {
+  &::before {
+    background-position: center;
+    background-size: cover;
+    width: 1.35rem;
+    height: 1.35rem;
+
+    border-radius: 50%;
+
+    background: radial-gradient($color-green-3 0%, $color-green-3 30%, $color-green-2 31%);
+  }
+}
+
+.statistics-cell .statistic__data::after {
+  border-color: $primary-color;
+}

@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "League Spartan";
+  font-display: swap;
+  src: url("fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arimo";
+  font-display: swap;
+  src: url("fonts/Arimo-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  font-variation-settings: "wght" 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variation-settings: "wght" 800;
+}
+
+@import "euteens4green/variables";
+@import "euteens4green/body";
+@import "euteens4green/footer";
+@import "euteens4green/navbar";
+@import "euteens4green/processes";

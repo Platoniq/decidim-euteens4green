@@ -3,5 +3,10 @@
 // settings have been loaded.
 //
 // To override styles use decidim_application.scss
-//
-// By default this is empty.
+@import "foundation-sites/scss/foundation";
+@import "../euteens4green/variables";
+
+@include add-foundation-colors;
+// @include foundation-button;
+// @include foundation-card;
+// @include foundation-tabs;
