@@ -14,13 +14,14 @@ gem "decidim-decidim_awesome"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: :master
 
 gem "bootsnap", "~> 1.3"
+gem "sidekiq", "~> 6.0"
+gem "sidekiq-cron"
 
 gem "puma", ">= 5.0.0"
 
 gem "faker", "~> 2.14"
 
 gem "wicked_pdf", "~> 2.1"
-
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
@@ -34,6 +35,14 @@ group :development do
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 4.0"
+
+  gem "capistrano", "~> 3.14"
+  gem "capistrano-bundler"
+  gem "capistrano-passenger"
+  gem "capistrano-rails"
+  gem "capistrano-rails-console"
+  gem "capistrano-rbenv"
+  gem "capistrano-sidekiq"
 end
 
 group :production do
