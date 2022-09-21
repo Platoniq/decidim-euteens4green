@@ -13,3 +13,49 @@
   font-variation-settings: "wght" $header-font-weight;
   font-family: $header-font-family;
 }
+
+.topbar {
+  .icon {
+    fill: $primary-color;
+    color: $primary-color;
+  }
+}
+
+.topbar__dropmenu > ul > li > a {
+  color: $anchor-color;
+
+  &:hover,
+  &:focus {
+    color: $anchor-color-hover;
+  }
+}
+
+.topbar__search {
+  input {
+    background: $light-gray;
+
+    &::placeholder {
+      color: $dark-gray;
+    }
+  }
+
+  &:not(:focus-within) input {
+    background: $body-background;
+    border: 2px solid $primary-color;
+  }
+
+  &:not(:focus-within) button {
+    background: $anchor-color;
+    svg.icon {
+      fill: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background: $anchor-color-hover;
+      svg.icon {
+        fill: $white;
+      }
+    }
+  }
+}

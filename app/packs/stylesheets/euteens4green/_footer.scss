@@ -70,4 +70,24 @@
       }
     }
   }
+
+  .eu-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      &.logo-bwn,
+      &.logo-sern {
+        max-height: 3rem;
+      }
+      &.logo-yee {
+        max-height: 5rem;
+      }
+    }
+  }
 }
