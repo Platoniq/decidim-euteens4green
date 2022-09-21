@@ -30,20 +30,22 @@
   }
 }
 
-.topbar__search {
-  input {
-    background: $light-gray;
+.topbar__search input,
+#input-search {
+  background: $light-gray;
 
-    &::placeholder {
-      color: $dark-gray;
-    }
+  &::placeholder {
+    color: $dark-gray;
   }
+}
 
-  &:not(:focus-within) input {
+.topbar__search {
+  &:focus-within input {
     background: $body-background;
     border: 2px solid $primary-color;
   }
 
+  button,
   &:not(:focus-within) button {
     background: $anchor-color;
     svg.icon {
