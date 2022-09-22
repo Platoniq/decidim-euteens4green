@@ -2,10 +2,10 @@
 
 Decidim.configure do |config|
   # The name of the application
-  config.application_name = "My Application Name"
+  config.application_name = "EUteens4Green"
 
   # The email that will be used as sender in all emails from Decidim
-  config.mailer_sender = "change-me@example.org"
+  config.mailer_sender = "no-reply@euteens4green.org"
 
   # Sets the list of available locales for the whole application.
   #
