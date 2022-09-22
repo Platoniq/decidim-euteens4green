@@ -2,7 +2,7 @@
 
 Decidim.configure do |config|
   # The name of the application
-  config.application_name = "EU Teens 4 Green"
+  config.application_name = "EUteens4Green"
 
   # The email that will be used as sender in all emails from Decidim
   config.mailer_sender = "no-reply@euteens4green.org"
