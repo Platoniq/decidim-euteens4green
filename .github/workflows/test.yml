@@ -1,4 +1,4 @@
-name: Lint
+name: Test
 
 on:
   push:
@@ -9,13 +9,24 @@ on:
 env:
   RUBY_VERSION: 3.0.2
   NODE_VERSION: 16.9.1
-    
+
 jobs:
-  lint:
-    name: Lint code
+  test:
+    name: Test
     runs-on: ubuntu-20.04
+    services:
+      postgres:
+        image: postgres:11
+        ports:
+          - 5432:5432
+        env:
+          DATABASE_USERNAME: postgres
+          DATABASE_PASSWORD: postgres
+          POSTGRES_HOST_AUTH_METHOD: trust
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
     steps:
-      - uses: actions/checkout@v2.0.0
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 1
 
@@ -24,15 +35,26 @@ jobs:
           ruby-version: ${{ env.RUBY_VERSION }}
           bundler-cache: true
 
-      - uses: actions/setup-node@master
-        with:
-          node-version: ${{ env.NODE_VERSION }}
+      - name: Bundle Install
+        run: bundle install
 
-      - run: bundle exec rubocop -P
-        name: Lint Ruby files
+      - name: Setup & create Database
+        run: bundle exec rake db:test:prepare
+        env:
+          RAILS_ENV: test
+          DATABASE_USERNAME: postgres
+          DATABASE_PASSWORD: postgres
 
-      - run: bundle exec mdl *.md
-        name: Lint Markdown files
-      
-      - run: bundle exec erblint app/views/**/*.erb
-        name: Lint ERB files
+      - name: Precompile assets
+        run: |
+          npm install
+          bundle exec rake assets:precompile
+        env:
+          RAILS_ENV: test
+
+      - name: Run RSpec
+        run: SIMPLECOV=1 CODECOV=1 bundle exec rspec
+        env:
+          RAILS_ENV: test
+          DATABASE_USERNAME: postgres
+          DATABASE_PASSWORD: postgres
