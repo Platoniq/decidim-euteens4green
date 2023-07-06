@@ -4,13 +4,15 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.26.2"
-gem "decidim-conferences", "0.26.2"
-# gem "decidim-consultations", "0.26.2"
-# gem "decidim-elections", "0.26.2"
-# gem "decidim-initiatives", "0.26.2"
-# gem "decidim-templates", "0.26.2"
-gem "decidim-decidim_awesome"
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.27-stable" }.freeze
+
+gem "decidim", DECIDIM_VERSION
+gem "decidim-conferences", DECIDIM_VERSION
+# gem "decidim-consultations", DECIDIM_VERSION
+# gem "decidim-elections", DECIDIM_VERSION
+# gem "decidim-initiatives", DECIDIM_VERSION
+# gem "decidim-templates", DECIDIM_VERSION
+gem "decidim-decidim_awesome", git: "https://github.com/decidim-ice/decidim-module-decidim_awesome", branch: "main"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: :master
 
 gem "bootsnap", "~> 1.3"
@@ -26,7 +28,7 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
   gem "brakeman"
-  gem "decidim-dev", "0.26.2"
+  gem "decidim-dev", DECIDIM_VERSION
 end
 
 group :development do
