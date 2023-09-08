@@ -21,8 +21,8 @@ namespace :extract_users_info do
       end
     end
 
-    mail = ActionMailer::Base.mail(from: "test@platoniq.net",
-                                   to: "davidbenabarre@platoniq.net",
+    mail = ActionMailer::Base.mail(from: Rails.application.secrets.extract_users_info[:from_email],
+                                   to: Rails.application.secrets.extract_users_info[:to_email],
                                    subject: "Extract user info",
                                    body: "Extract user info")
 
