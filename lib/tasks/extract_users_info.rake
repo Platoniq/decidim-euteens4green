@@ -2,6 +2,7 @@
 require "csv"
 
 namespace :extract_users_info do
+  desc "Extract users info into a csv and then send it by email"
   task extract_users_info: [:environment] do
 
     # create csv with datetime on name and headers
