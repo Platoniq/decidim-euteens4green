@@ -17,7 +17,6 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 
 gem "bootsnap", "~> 1.3"
 gem "sidekiq", "~> 6.0"
-gem "sidekiq-cron"
 
 gem "puma", ">= 5.0.0"
 
@@ -50,4 +49,5 @@ end
 
 group :production do
   gem "figaro", "~> 1.2"
+  gem "whenever", "~> 1.0"
 end
