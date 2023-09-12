@@ -7,7 +7,7 @@ namespace :extract_users_info do
   task extract_users_info: [:environment] do
     # create csv with datetime on name and headers
     csv_name = "extract_users_info_#{Time.zone.now.strftime("%Y%m%d")}.csv"
-    headers = %w(id email comments_created comments_created_this_month meetings_created meetings_created_this_month posts_created posts_created_this_month)
+    headers = %w(id email comments_created comments_created_last_month meetings_created meetings_created_last_month posts_created posts_created_last_month)
 
     csv_string = CSV.generate(headers: headers, write_headers: true) do |csv|
       Decidim::User.find_each do |user|
@@ -24,8 +24,8 @@ namespace :extract_users_info do
 
     mail = ActionMailer::Base.mail(from: Rails.application.secrets.extract_users_info[:from_email],
                                    to: Rails.application.secrets.extract_users_info[:to_email],
-                                   subject: t("eut4g.extract_users_info.mail.subject"),
-                                   body: t("eut4g.extract_users_info.mail.body"))
+                                   subject: I18n.t("eut4g.extract_users_info.mail.subject"),
+                                   body: I18n.t("eut4g.extract_users_info.mail.body"))
 
     mail.attachments[csv_name] = csv_string
     mail.deliver_now
