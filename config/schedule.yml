@@ -1,6 +1,0 @@
-#config/schedule.yml
-
-export_users_info_job:
-  cron: "0 8 1 * *"
-  class: "ExtractUsersInfoWorker"
-  queue: exports

@@ -12,13 +12,13 @@ namespace :extract_users_info do
     csv_string = CSV.generate(headers: headers, write_headers: true) do |csv|
       Decidim::User.find_each do |user|
         comments_created = Decidim::Comments::Comment.where(author: user).count
-        comments_created_this_month = Decidim::Comments::Comment.where(author: user, created_at: Time.zone.now.all_month).count
+        comments_created_last_month = Decidim::Comments::Comment.where(author: user, created_at: Time.zone.now.last_month).count
         meetings_created = Decidim::Meetings::Meeting.where(author: user).count
-        meetings_created_this_month = Decidim::Meetings::Meeting.where(author: user, created_at: Time.zone.now.all_month).count
+        meetings_created_last_month = Decidim::Meetings::Meeting.where(author: user, created_at: Time.zone.now.last_month).count
         posts_created = Decidim::Blogs::Post.where(author: user).count
-        posts_created_this_month = Decidim::Blogs::Post.where(author: user, created_at: Time.zone.now.all_month).count
+        posts_created_last_month = Decidim::Blogs::Post.where(author: user, created_at: Time.zone.now.last_month).count
 
-        csv << [user.id, user.email, comments_created, comments_created_this_month, meetings_created, meetings_created_this_month, posts_created, posts_created_this_month]
+        csv << [user.id, user.email, comments_created, comments_created_last_month, meetings_created, meetings_created_last_month, posts_created, posts_created_last_month]
       end
     end
 
