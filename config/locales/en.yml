@@ -34,5 +34,9 @@ en:
         youth_assoc: Youth association
       project_impacts_helps:
         community_neighborhood_etc: In the community, neighborhood...
+    extract_users_info:
+      mail:
+        subject: "Extract users info"
+        body: "The extraction of users info has been requested. You can download the attached file."
   eu_footer:
     block_1: This publication was produced with the financial support of the European Union. Its contents are the sole responsibility of the EU Teens 4 Green consortium and do not necessarily reflect the views of the European Union
