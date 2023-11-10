@@ -11,6 +11,12 @@ checksums = [
     files: {
       "/lib/decidim/amendable.rb" => "7c6d8a85102bf1a8c3376ef47422b5df"
     }
+  },
+  {
+    package: "decidim-proposals",
+    files: {
+      "/app/helpers/decidim/proposals/application_helper.rb" => "a9c9ed5eedaf7bf80afaf9ff5a89c254"
+    }
   }
 ]
 
