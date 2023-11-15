@@ -15,7 +15,9 @@ checksums = [
   {
     package: "decidim-proposals",
     files: {
-      "/app/helpers/decidim/proposals/application_helper.rb" => "a9c9ed5eedaf7bf80afaf9ff5a89c254"
+      "/app/helpers/decidim/proposals/application_helper.rb" => "a9c9ed5eedaf7bf80afaf9ff5a89c254",
+      "/app/permissions/decidim/proposals/permissions.rb" => "676fb50e4984ed3c62ec63cccdfcb051",
+      "/app/views/decidim/proposals/proposals/show.html.erb" => "f27bbec257eb6da28dbdd07ac0a224a5"
     }
   }
 ]
